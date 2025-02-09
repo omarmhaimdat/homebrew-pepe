@@ -1,14 +1,14 @@
 class Pepe < Formula
   desc "HTTP load generator and performance testing tool"
   homepage "https://github.com/omarmhaimdat/pepe"
-  version "0.1.5"
+  version "0.2.0"
 
   if Hardware::CPU.arm?
-    url "https://pepe.mhaimdat.com/0.1.5/aarch64-apple-darwin/pepe"
-    sha256 "70cc5af5c12cf2b0575d89bbea5dec873b497d8b3027fd77469575a20067ee04"
+    url "https://pepe.mhaimdat.com//aarch64-apple-darwin/pepe"
+    sha256 "f332b5289e0dee3f50c4f61e3da2b1d0b2e54cd901f867038972787220c6b0fe"
   else
-    url "https://pepe.mhaimdat.com/0.1.5/x86_64-apple-darwin/pepe"
-    sha256 "c391199f9a6ff98120288e5878a05208c17ae353b49762bca0237608e05104e3"
+    url "https://pepe.mhaimdat.com//x86_64-apple-darwin/pepe"
+    sha256 "4c46f0eaa7abe79f213022bd7097d11ab6155c06a74eebb41e9a94c944d4233d"
   end
 
   def install
