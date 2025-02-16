@@ -5,10 +5,10 @@ class Pepe < Formula
 
   if Hardware::CPU.arm?
     url "https://pepe.mhaimdat.com/0.2.7/aarch64-apple-darwin/pepe"
-    sha256 "70e01404574b78b9d3a7877defc330ad57cdb705e2af8d4265e36cff0cc7f465"
+    sha256 "aa507abdf356439ac57c64a1672b6aa38edb167e0d6e52f5b72a03dd7f798ae7"
   else
     url "https://pepe.mhaimdat.com/0.2.7/x86_64-apple-darwin/pepe"
-    sha256 "9de2dade55dcb5ff255bd51cc64ce70cff660929f44db69b38f3162dd33cdb79"
+    sha256 "a5b113029284f808ebf44de20484436ba595c2f69426b94abc1cbbe6eebd633d"
   end
 
   def install
