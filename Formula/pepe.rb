@@ -1,25 +1,25 @@
 class Pepe < Formula
   desc "HTTP load generator and performance testing tool"
   homepage "https://github.com/omarmhaimdat/pepe"
-  version "0.8.0"
+  version "0.9.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/omarmhaimdat/pepe/releases/download/v0.8.0/pepe-aarch64-apple-darwin.tar.xz"
-      sha256 "694c2fd6438881fd9daaba1d90f51ed3c8642ca06f6e5a726cd226ab8e301c01"
+      url "https://github.com/omarmhaimdat/pepe/releases/download/v0.9.0/pepe-aarch64-apple-darwin.tar.xz"
+      sha256 "60eb488adde577e25334cdcbb55c99b68b59d4238fa5f99bba698e0f57046fcd"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/omarmhaimdat/pepe/releases/download/v0.8.0/pepe-x86_64-apple-darwin.tar.xz"
-      sha256 "241ae76f148e8436121f07dbcb1b297319f267535c74d95036029d8dc34d7ac1"
+      url "https://github.com/omarmhaimdat/pepe/releases/download/v0.9.0/pepe-x86_64-apple-darwin.tar.xz"
+      sha256 "5d3524336ec0acf9d7d6257a7aa3e1499800b40fbf22886108b2855d69eae8e3"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/omarmhaimdat/pepe/releases/download/v0.8.0/pepe-aarch64-unknown-linux-musl.tar.xz"
-      sha256 "67d405d46760808c89c7ea77bc69990ece4afd75b4e4ac77a01e2c1614ecdf1c"
+      url "https://github.com/omarmhaimdat/pepe/releases/download/v0.9.0/pepe-aarch64-unknown-linux-musl.tar.xz"
+      sha256 "989707f24516f5b32d52c2e7f22ecd786428cee2095fc1c6095af4a9a3b37466"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/omarmhaimdat/pepe/releases/download/v0.8.0/pepe-x86_64-unknown-linux-musl.tar.xz"
-      sha256 "605f2fe990da4eedc817f26a63104abca0c52ba0e0b4704886de281b28881068"
+      url "https://github.com/omarmhaimdat/pepe/releases/download/v0.9.0/pepe-x86_64-unknown-linux-musl.tar.xz"
+      sha256 "510da3d9330e4302d0ca47b1150d7556e31673998fa31446b521acd06bcbf8a6"
     end
   end
   license "MIT"
@@ -66,10 +66,14 @@ class Pepe < Formula
     end
 
     install_binary_aliases!
+    bash_completion.install "completions/pepe.bash" => "pepe"
+    zsh_completion.install "completions/_pepe"
+    fish_completion.install "completions/pepe.fish"
+    man1.install Dir["man/*.1"]
 
     # Homebrew will automatically install these, so we don't need to do that
     doc_files = Dir["README.*", "readme.*", "LICENSE", "LICENSE.*", "CHANGELOG.*"]
-    leftover_contents = Dir["*"] - doc_files
+    leftover_contents = Dir["*"] - doc_files - ["completions", "man"]
 
     # Install any leftover files in pkgshare; these are probably config or
     # sample files.
