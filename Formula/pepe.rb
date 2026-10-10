@@ -1,25 +1,25 @@
 class Pepe < Formula
   desc "HTTP load generator and performance testing tool"
   homepage "https://github.com/omarmhaimdat/pepe"
-  version "0.30.0"
+  version "0.31.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/omarmhaimdat/pepe/releases/download/v0.30.0/pepe-aarch64-apple-darwin.tar.xz"
-      sha256 "fef9d0c0d1e47276e00781b37745f4027cb191de624c1b755f8d8e4cdb351838"
+      url "https://github.com/omarmhaimdat/pepe/releases/download/v0.31.0/pepe-aarch64-apple-darwin.tar.xz"
+      sha256 "43d559faa6963c9f8dcd4b75945d68cdac1afadd03bda63dc6f33053387ac7aa"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/omarmhaimdat/pepe/releases/download/v0.30.0/pepe-x86_64-apple-darwin.tar.xz"
-      sha256 "90edf2c2684e1b52cf1371ca40dadc7da63b6314893533fd700156dbabdf3447"
+      url "https://github.com/omarmhaimdat/pepe/releases/download/v0.31.0/pepe-x86_64-apple-darwin.tar.xz"
+      sha256 "1498d3f69d2fd64530d27835c4621c9532a845e2a43a8b89383b2a90c2e6bf3d"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/omarmhaimdat/pepe/releases/download/v0.30.0/pepe-aarch64-unknown-linux-musl.tar.xz"
-      sha256 "7ae759d40d07f514d16f7c159dc11b21e61e3dc755ea3dfe2aea0a9da4729214"
+      url "https://github.com/omarmhaimdat/pepe/releases/download/v0.31.0/pepe-aarch64-unknown-linux-musl.tar.xz"
+      sha256 "4840850913fc7bdddd50699524da81eb92cd20dec5df75fa6d43a6e28ca79f54"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/omarmhaimdat/pepe/releases/download/v0.30.0/pepe-x86_64-unknown-linux-musl.tar.xz"
-      sha256 "e9c791fb9bf8dbb4d47d68d04d0823c283a1544ffb21018df8774d78b60541e0"
+      url "https://github.com/omarmhaimdat/pepe/releases/download/v0.31.0/pepe-x86_64-unknown-linux-musl.tar.xz"
+      sha256 "861259d96fc30069076f8d416ec940848171cb80e28cc9c3f28575f4e2e62032"
     end
   end
   license "MIT"
